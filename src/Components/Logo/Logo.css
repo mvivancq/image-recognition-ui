@@ -1,0 +1,5 @@
+.tilt-overflow{
+    display: inline-block;
+    overflow: hidden;
+    background-color: azure;
+}
