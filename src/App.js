@@ -51,16 +51,25 @@ class App extends Component {
     const router = createBrowserRouter([
       {
         path: "/",
-        element: <SignIn />,
+        element:<>
+          <Logo />
+          <SignIn />
+        </>,
       },
       {
         path: "/register",
-        element: <Register />,
+        element: 
+        <>
+          <Logo />
+          <Register />
+        </>,
       },
       {
         path: "home",
         element: 
         <>
+          <Navigation />
+          <Logo />
           <Rank />
           <ImageLinkForm onInputChange = { this.onInputChange }  onSubmit = { this.onSubmit }/>
           <FaceRecognition box={this.state.box} imageUrl = {this.state.imageUrl}/>
@@ -70,8 +79,6 @@ class App extends Component {
     return (
       <div className="App">
         <ParticlesBg type="lines" bg={true} /> 
-        <Navigation />
-        <Logo />
         <RouterProvider router={router} />
         
       </div>
